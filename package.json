@@ -4,6 +4,7 @@
   "description": "A threejs based game editor in the browser",
   "main": "index.js",
   "scripts": {
+    "editor": "node Editor/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
