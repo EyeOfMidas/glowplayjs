@@ -1,0 +1,28 @@
+{
+  "name": "glowplayjs",
+  "version": "0.0.1",
+  "description": "A threejs based game editor in the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EyeOfMidas/glowplayjs.git"
+  },
+  "keywords": [
+    "threejs",
+    "browser"
+  ],
+  "author": "Justin Gilman <eyeofmidas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EyeOfMidas/glowplayjs/issues"
+  },
+  "homepage": "https://github.com/EyeOfMidas/glowplayjs#readme",
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.11.2",
+    "howler": "^2.2.4",
+    "three": "^0.158.0"
+  }
+}
