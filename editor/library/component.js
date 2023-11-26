@@ -1,6 +1,10 @@
 export default class Component {
-    constructor(html, css, js) {
+    constructor(type, html, css, js) {
+        this.type = type
+        let uuid = crypto.randomUUID()
         this.html = html
+
+        this.html.id = `${type}-${uuid}`
         this.css = css
         this.js = js
     }

@@ -26,7 +26,7 @@ export default class DomBuilder {
         parentComponent.appendChild(component)
 
         component.appendChild(js)
-        return new Component(component, css, js)
+        return new Component(targetComponent, component, css, js)
     }
 
     async getHtml(targetFile) {
