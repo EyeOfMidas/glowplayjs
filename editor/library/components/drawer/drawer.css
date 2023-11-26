@@ -3,5 +3,8 @@
     display: none;
     visibility: hidden;
     width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: crimson;
 }

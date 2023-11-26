@@ -1,3 +1,5 @@
+import Component from "./component.js"
+
 export default class DomBuilder {
     constructor() {
         this.cacheBusting = `?t=${new Date().getTime()}`
@@ -24,7 +26,7 @@ export default class DomBuilder {
         parentComponent.appendChild(component)
 
         component.appendChild(js)
-        return component
+        return new Component(component, css, js)
     }
 
     async getHtml(targetFile) {
