@@ -1,3 +1,7 @@
 .drawer {
     color: white;
+    display: none;
+    visibility: hidden;
+    width: 300px;
+    background-color: crimson;
 }
