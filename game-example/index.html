@@ -1,1 +1,16 @@
-<h1>Game</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<link rel="shortcut icon" href="firefly.svg" type="image/svg">
+    </head>
+    <body>
+        <h1>Game</h1>
+        <script type="module">
+            import GameApp from "./lib/GameApp.js"
+            document.addEventListener("DOMContentLoaded", () => {
+                const app = new GameApp()
+                app.init()
+            })
+        </script>
+    </body>
+</html>
