@@ -28,18 +28,18 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(canvas.offsetWidth, canvas.offsetHeight)
 
-renderer.render(scene, camera)
+window.addEventListener('resize', event => {
+    const aspectRatio = window.innerWidth / window.innerHeight
+    camera.aspect = aspectRatio
+    camera.updateProjectionMatrix()
 
-// window.addEventListener('resize', event => {
-//     console.log("resizing", event)
-//     const aspectRatio = canvas.offsetWidth / canvas.offsetHeight
-//     camera.aspect = aspectRatio
-//     camera.updateProjectionMatrix()
-//     renderer.setSize(canvas.offsetWidth, canvas.offsetHeight)
+    renderer.setSize( window.innerWidth, window.innerHeight, true)
+    render()
+}, false)
 
-//     const ratio = window.devicePixelRatio;
-//     renderer.domElement.width = canvas.offsetWidth * ratio;
-//     renderer.domElement.height = canvas.offsetHeight * ratio;
-//     renderer.domElement.style.width = `${canvas.offsetWidth}px`;
-//     renderer.domElement.style.height = `${canvas.offsetHeight}px`;
-// })
+function render() {
+    renderer.render(scene, camera)
+    // window.requestAnimationFrame(render)
+}
+
+render()
